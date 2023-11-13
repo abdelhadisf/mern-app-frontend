@@ -43,7 +43,8 @@ const WorkoutsForm = () => {
 
         if(!response.ok) {
             setError(json.error);
-            setEmptyField(json.emptyField);
+           
+            // setEmptyField(json.emptyField);
 
         }
 
