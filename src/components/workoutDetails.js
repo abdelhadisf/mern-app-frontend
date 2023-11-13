@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useWorkoutsContext } from "./hooks/useWorkoutsContext";
 import {useAuthContext} from '../components/hooks/useAuthContext'
-
+const backendUrl = process.env.BACKEND_URL;
 
 
 const WorkoutDetails = ({workout}) => {
@@ -14,7 +14,7 @@ const WorkoutDetails = ({workout}) => {
         if(!user) {
            return
         }
-        const response = await fetch('/api/workouts/' + workout._id ,
+        const response = await fetch(backendUrl + '/api/workouts/' + workout._id ,
         {method : 'DELETE',
         headers : {
             'Authorization' : `Bearer ${user.token}`

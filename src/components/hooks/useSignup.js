@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {useAuthContext} from "./useAuthContext"
-
+const backendUrl = process.env.BACKEND_URL;
 
 export const useSignup = () => {
 
@@ -16,7 +16,7 @@ export const useSignup = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('/api/user/signup',
+        const response = await fetch(backendUrl + '/api/user/signup',
         {
             method : 'POST',
             headers:{'Content-Type' : 'application/json'},

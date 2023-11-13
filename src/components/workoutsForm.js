@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useWorkoutsContext } from "./hooks/useWorkoutsContext";
 import {useAuthContext} from '../components/hooks/useAuthContext'
-
+const backendUrl = process.env.BACKEND_URL;
 
 const WorkoutsForm = () => {
     const {dispatch} = useWorkoutsContext();
@@ -26,7 +26,7 @@ const WorkoutsForm = () => {
         const workout = {title ,load, reps};
         // fetch request
 
-        const response = await fetch('/api/workouts',
+        const response = await fetch(backendUrl +'/api/workouts',
         {   method : 'POST' , 
             body:JSON.stringify(workout) ,
             headers :{
