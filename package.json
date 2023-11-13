@@ -1,6 +1,6 @@
 
 {
-  "proxy": "https://mern-app-vrwl.onrender.com/",
+  "proxy": "https://mern-app-vrwl.onrender.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
