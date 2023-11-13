@@ -9,7 +9,7 @@ const WorkoutsForm = () => {
     const [load,setLoad] = useState() ;
     const [reps,setReps] = useState() ;
     const [error,setError] = useState(null) ;
-    const [emptyField,setEmptyField] = useState();
+    // const [emptyField,setEmptyField] = useState();
 
     const {user} = useAuthContext();
 
@@ -94,4 +94,4 @@ const WorkoutsForm = () => {
 
 
 
-export default WorkoutsForm 
+export default WorkoutsForm ;
